@@ -1,4 +1,5 @@
-# MeetApp
-# Using LESS and jQuery 
-# Index page with menu and filters
-# Added dynamic "Follow up" and "Bookmark" buttons
+# MeetApp UI/UX Demo Project
+================================
+I'm using HTML, CSS/LESS and jQuery 
+So far done: Index page with menu and filters
+Dynamic elements: Menus, "Follow up" and "Bookmark" buttons
