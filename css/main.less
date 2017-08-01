@@ -1,5 +1,4 @@
 @import url("reset.css") screen;
-@import url("animation.css") screen;
 @import url("unsemantic-grid-responsive.css") screen;
 @import url("font-awesome.css") screen;
 @import url("font-awesome-ie7.css") screen;
@@ -116,6 +115,18 @@ h3 { font-size:1.5em; padding-bottom:1em;  }
 					background:#fff;
 				}
 			}
+		}
+	}
+	button{
+		float:left;
+		border:1px solid @background-content;
+		color:@background-content;
+		background:none;
+		cursor:pointer;
+		&:hover{
+			background:@background-content;
+			border:1px solid @background-content;
+			color:@logo-red-rgb;
 		}
 	}
 }
