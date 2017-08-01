@@ -1,0 +1,387 @@
+@import url("reset.css") screen;
+@import url("animation.css") screen;
+@import url("unsemantic-grid-responsive.css") screen;
+@import url("font-awesome.css") screen;
+@import url("font-awesome-ie7.css") screen;
+
+@font-face {
+    font-family: 'Porter Bold';
+    src: url("../fonts/PorterBold.otf");
+}
+@font-face {
+    font-family: 'Porter Medium';
+    src: url("../fonts/PorterMedium.otf");
+}
+@font-face{
+font-family: proximanova-light;
+src: url('../fonts/proximanova-light.otf'),
+     url('../fonts/proximanova-light.otf'); /* IE9 */
+} 
+@font-face{
+font-family: bebas;
+src: url('../fonts/bebas___.ttf'),
+     url('../fonts/bebas___.ttf'); /* IE9 */
+} 
+@font-face{
+font-family: prometheus;
+src: url('../fonts/prometheus.ttf'),
+     url('../fonts/prometheus.ttf'); /* IE9 */
+} 
+
+@font-body: "Myriad Pro", Myriad Pro, "Calibri", Calibri;
+@background-color:#f1f1f1;
+@main-color:#345e6e;
+@font-color:#757575;
+@logo-red-rgb: rgb(228, 85, 88);
+@logo-red-rgba: rgba(228, 85, 88, 0.9); 
+@background-content:lighten(@main-color, 10%);
+@green-color:#1bb869;
+body{ 
+	font-family: @font-body;
+  	background:@background-color;
+	font-size:0.65em;
+}
+p{
+	font-size:1em;
+	line-height:1.4em;
+	padding-bottom:1.4em;
+	color:@font-color;
+}
+
+.clear{ clear:both; }
+h1, h2, h3, h4{
+	font-family:@font-body;
+	padding-bottom:0.75em;
+	text-transform:uppercase;
+}
+h1 { font-size:2.5em; padding-bottom:1em;   }
+h2 { font-size:2em; }
+h3 { font-size:1.5em; padding-bottom:1em;  }
+.grid-container{ max-width:1200px; }
+
+.header{
+	height:6em;
+	line-height:6em;
+	background:@main-color;
+	& .header--menu{
+	
+	}
+	& .header--navigation{
+		& .header--navigation__back-arrow{
+			& .fa{ color:#fff; }
+		}
+	}
+	& .header--title{
+		text-align:center;
+		& h1{
+			margin:0;
+			padding:0;
+			color:#fff;
+			text-align:center;
+		}
+	}
+}
+/* MOBILE MENU */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: -100%;
+    top: 0;
+	 -webkit-transition: all 0.2s;
+    background-color: #fff; /* Black fallback color */
+    background-color: #fff; /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+	&.filters{
+		left: 100%;
+	}
+	& .menu-mobile{ 
+		margin-top:2em;
+		& .navigation-mobile{
+			margin-bottom:3em;
+			& a {
+				float:left;
+				width:100%;
+				text-align:center;
+				line-height:40px;
+				height:40px;
+				font-size:2em;
+				font-weight:600;
+				color:@background-content;
+				&:hover{
+					color:@logo-red-rgb;
+					background:#fff;
+				}
+			}
+		}
+	}
+}
+.button{
+	float:left;
+	background: @logo-red-rgb;
+	color:#fff;
+	cursor:pointer;
+	border:0;
+	height:3em;
+	line-height:3em;
+	&:hover{
+		background: darken(@logo-red-rgb,25%);
+		color:#fff;
+	}
+}
+/* MOBILE MENU END*/
+button{
+	cursor:pointer;
+}
+.filter--button{
+	width:3em;
+	height:3em;
+	background:@logo-red-rgb;
+	border-radius: 50%;
+	border: 0;
+	margin: 0.75em 1em;
+	& .fa{ 
+		color:#fff; 
+		font-size:1.25em;
+		margin:5px 10px;
+	}
+	&:hover{
+		background:darken(@logo-red-rgb, 10%);
+	}
+	&.filter--button--close, &.filter--button--filter{
+		float:right;
+	}
+}
+.contact--item{
+	background:#fff;
+	padding-top:1em;
+	padding-bottom:1em;
+	margin-bottom:1em;
+	& .contact--item--photo{
+		& .contact--item--photo__image{
+			border-radius:50%;
+		}
+	}
+	& h2, h3{
+		color:@main-color;
+		line-height:1em;
+		padding-bottom:0;
+		font-weight:500;
+	}
+	& h3{
+		color:@font-color;
+		text-transform:uppercase;
+	}
+	& .contact--item--actions{
+		margin-top:1em;
+		padding-top:1em;
+		border-top:1px solid lighten(@font-color, 50%);
+		font-size:1.25em;
+		line-height:3em; 
+		font-family:@font-body;
+		& label{ 
+			float:left;
+			margin-right:1em;
+			text-transform:uppercase;
+		}
+		& button{
+			line-height:3em;
+			float:left;
+			background:none;
+			border:0;
+			& .fa{
+				font-size:1.5em;
+				&.fa-bookmark{
+					color:@logo-red-rgb;
+				}
+				&.fa-bookmark-o{
+					color:#f00;
+				}
+			}
+		}
+	}
+}
+.filters{ 
+	& .filter--areas{
+		margin-top:1em;
+		font-size:1.25em;
+		& .filter--area{
+			padding-bottom:2em;
+			margin-bottom:2em;
+			border-bottom:1px solid lighten(@font-color, 40%);
+			& .filter--date, & .filter--categories{
+				& .filter--date__input, & .filter--categories__input{
+					line-height:3em;
+					height:3em;
+					border:1px solid lighten(@font-color, 40%);
+					margin-bottom:1em;
+				}
+			}
+			& .filter--category__item{
+				float:left;
+				margin:0 1em 1em 0;
+				padding:1em;
+				background:lighten(@font-color, 40%);
+			}
+		}
+	}
+}
+.search--area{
+	margin-top:1em;
+	font-size:1.25em;
+	& .search--area--input{
+		& input{
+			line-height:3em;
+			height:3em;
+			border:1px solid lighten(@font-color, 40%);
+			margin-bottom:1em;
+		}
+	}
+}
+/* Switch Yes No
+==========================*/
+.switch {
+	float:left;
+	position: relative;
+	display: block;
+	vertical-align: top;
+	width: 6em;
+	height: 3em;
+	padding: 3px;
+	background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+	background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+	cursor: pointer;
+	box-sizing:content-box;
+}
+.switch-input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	box-sizing:content-box;
+}
+.switch-label {
+	position: relative;
+	display: block;
+	height: inherit;
+	text-transform: uppercase;
+	background: #eceeef;
+	border-radius: inherit;
+}
+.switch-label:before, .switch-label:after {
+	position: absolute;
+	top: 50%;
+	margin-top: -.5em;
+	line-height: 1;
+	-webkit-transition: inherit;
+	-moz-transition: inherit;
+	-o-transition: inherit;
+	transition: inherit;
+	box-sizing:content-box;
+}
+.switch-label:before {
+	content: attr(data-off);
+	right: 1em;
+	color: @font-color;
+}
+.switch-label:after {
+	content: attr(data-on);
+	left: 1em;
+	color: #FFFFFF;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+}
+.switch-input:checked ~ .switch-label {
+	background: #E1B42B;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.switch-input:checked ~ .switch-label:before {
+	opacity: 0;
+}
+.switch-input:checked ~ .switch-label:after {
+	opacity: 1;
+}
+.switch-handle {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 28px;
+	height: 28px;
+	background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+	background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+	border-radius: 100%;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.switch-handle:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -6px 0 0 -6px;
+	width: 12px;
+	height: 12px;
+	background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+	background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+	border-radius: 6px;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+}
+.switch-input:checked ~ .switch-handle {
+	left: 74px;
+	box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+ 
+/* Transition
+========================== */
+.switch-label, .switch-handle {
+	transition: All 0.3s ease;
+	-webkit-transition: All 0.3s ease;
+	-moz-transition: All 0.3s ease;
+	-o-transition: All 0.3s ease;
+}
+
+/* Switch Slide
+==========================*/
+.switch-slide {
+	padding: 0;
+	background: #FFF;
+	border-radius: 0;
+	background-image: none;
+}
+.switch-slide .switch-label {
+	box-shadow: none;
+	background: none;
+	overflow: hidden;
+}
+.switch-slide .switch-label:after, .switch-slide .switch-label:before {
+	width: 100%;
+	height: 70%;
+	top: 5px;
+	left: 0;
+	text-align: center;
+	padding-top: 18%;
+}
+.switch-slide .switch-label:after {
+	color: #FFFFFF;
+	background: @green-color;
+	left: -100px;
+}
+.switch-slide .switch-label:before {
+	background: #eceeef;
+}
+.switch-slide .switch-handle {
+	display: none;
+}
+.switch-slide .switch-input:checked ~ .switch-label {
+	background: #FFF;
+	border-color: #0088cc;
+}
+.switch-slide .switch-input:checked ~ .switch-label:before {
+	left: 100px;
+}
+.switch-slide .switch-input:checked ~ .switch-label:after {
+	left: 0;
+}
+

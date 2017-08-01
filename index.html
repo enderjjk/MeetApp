@@ -1,0 +1,180 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Meet - Follow App</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href=""/>
+	<link rel="stylesheet/less" type="text/css" href="css/main.less" media="screen" />
+	<script src="js/less.min.js"></script>
+	<link rel="stylesheet" href="css/media.css" />
+	<script src="js/jquery-3.0.0.min.js"></script>
+	<script src="js/jquery-migrate-3.0.0.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/modernizr.custom.js"></script>	
+</head> 
+<body>
+	<header class="header">
+		<div class="grid-100 mobile-grid-100 grid-parent">
+			<div class="grid-25 mobile-grid-25 grid-parent header--navigation">
+				<button id="menu--button" class="filter--button filter--button--menu">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</button>
+			</div>
+			<div class="grid-50 mobile-grid-50 grid-parent header--title">
+				<h1>Contacts</h1>
+			</div>
+			<div class="grid-25 mobile-grid-25 grid-parent">
+				<button id="filter--button--filter" class="filter--button filter--button--filter">
+					<i class="fa fa-filter" aria-hidden="true"></i>
+				</button>
+			</div>
+		</div>
+	</header>
+	<section id="navigation" class="overlay">
+		<header class="header">
+			<div class="grid-100 mobile-grid-100 grid-parent">
+
+				<div class="grid-50 push-25 mobile-grid-50 grid-parent header--title">
+					<h1>Menu</h1>
+				</div>
+				<div class="grid-25 push-25 mobile-grid-25 grid-parent">
+					<div>
+						<button id="button--menu-close" class="filter--button filter--button--close">
+							<i class="fa fa-times" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>		
+		<div class="mobile-grid-100 grid-parent menu-mobile">
+			<div class="grid-container search--area">
+				<div class="mobile-grid-100 grid-parent search--area">
+					<div class="grid-80 mobile-grid-70 grid-parent search--area--input">
+						<input class="grid-100 mobile-grid-100" placeholder="FIND CONTACT">
+					</div>
+					<div class="grid-20 mobile-grid-30 grid-parent">
+						<button id="search-global" class="button search--area--button grid-100 mobile-grid-100">SEARCH</button>
+					</div>
+				</div>
+			</div>
+			<nav class="navigation-mobile grid-100 mobile-grid-100">
+				<div class="grid-100 mobile-grid-100">
+					<a href="index.html">Link 1</a>
+					<a href="index.html">Link 2</a>
+					<a href="index.html">Link 3</a>
+					<a href="index.html">Link 4</a>
+					<a href="index.html">Link 5</a>
+					<a href="index.html">Link 6</a>
+				</div>
+			</nav>
+		</div>
+	</section>
+	<section id="filters" class="overlay filters">
+		<header class="header">
+			<div class="grid-100 mobile-grid-100 grid-parent">
+				<div class="grid-25 mobile-grid-25 grid-parent header--navigation">
+					<div>
+						<button id="filter--button--apply" class="filter--button filter--button--apply">
+							<i class="fa fa-check" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+				<div class="grid-50 mobile-grid-50 grid-parent header--title">
+					<h1>Filters</h1>
+				</div>
+				<div class="grid-25 mobile-grid-25 grid-parent">
+					<div>
+						<button id="filter--button--close" class="filter--button filter--button--close">
+							<i class="fa fa-times" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>	
+		<div class="grid-container grid-parent filter--areas">
+			<div class="grid-100 mobile-grid-100 grid-parent filter--area">
+				<div class="grid-100 mobile-grid-100 ">
+					<h3>DATE OF THE MEETING</h3>
+				</div>
+				<div class="grid-50 mobile-grid-100 filter--date">
+					<input type="text" class="grid-100 mobile-grid-100 filter--date__input" placeholder="DATE FROM">
+				</div>
+				<div class="grid-50 mobile-grid-100 filter--date">
+					<input type="text" class="grid-100 mobile-grid-100 filter--date__input" placeholder="DATE TO">
+				</div>
+			</div>
+			<div class="grid-100 mobile-grid-100 grid-parent filter--area">
+				<div class="grid-100 mobile-grid-100 ">
+					<h3>CATEGORY</h3>
+				</div>
+				<div class="grid-100 mobile-grid-100 filter--categories">
+					<input type="text" class="grid-100 mobile-grid-100 filter--categories__input" placeholder="ADD CATEGORIES">
+				</div>
+				<div class="grid-100 mobile-grid-100 filter--categories">
+					<div class="filter--category__item">
+						<label>Category 1</label>
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</div>
+						
+				</div>
+			</div>
+			<div class="grid-100 mobile-grid-100 grid-parent filter--area">
+				<div class="grid-100 mobile-grid-100 ">
+					<h3>FOLLOW UP NEEDED</h3>
+				</div>
+				<div class="grid-100 mobile-grid-100">
+					<label class="switch switch-slide">
+						<input class="switch-input" type="checkbox" />
+						<span class="switch-label" data-on="Yes" data-off="No"></span> 
+						<span class="switch-handle"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="grid-container grid-parent">
+		<div class="grid-100 mobile-grid-100 grid-parent contacts">
+			<div class="grid-50 mobile-grid-100">
+				<div class="grid-100 mobile-grid-100 grid-parent contact--item">
+					<div class="grid-100 mobile-grid-100 grid-parent">
+						<div class="grid-15 mobile-grid-30 contact--item--photo">
+							<img src="images/person.jpg" class="grid-100 mobile-grid-100 grid-parent contact--item--photo__image">
+						</div>
+						<div class="grid-85 mobile-grid-70 contact--item--details">
+							<h2 class="contact--item--details__name">Juliusz Kwiatkowski</h2>
+							<h3 class="contact--item--details__company">Front end dev</h3>
+							<h3 class="contact--item--details__position">Enderstudio</h3>
+						</div>
+					</div>
+					<div class="grid-100 mobile-grid-100 grid-parent contact--item--actions">
+						<div class="grid-33 mobile-grid-33 contact--item--actions__bookmark">
+							<label>Bookmark</label>
+							<button class="bookmark">
+								<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							</button>
+						</div>
+						<div class="grid-33 mobile-grid-33 contact--item--actions__messages">
+							<label>Messages</label>
+							<button>
+								<i class="fa fa-comment" aria-hidden="true"></i>
+							</button>
+						</div>
+						<div class="grid-33 mobile-grid-33 contact--item--actions__follow-up">
+							<label>Follow</label>
+							<label class="switch switch-slide">
+								<input class="switch-input" type="checkbox" />
+								<span class="switch-label" data-on="Yes" data-off="No"></span> 
+								<span class="switch-handle"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
