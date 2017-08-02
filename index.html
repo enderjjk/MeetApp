@@ -51,7 +51,7 @@
 			</div>
 		</header>		
 		<div class="mobile-grid-100 grid-parent menu-mobile">
-			<div class="grid-container search--area">
+			<div class="grid-container">
 				<div class="mobile-grid-100 grid-parent search--area">
 					<div class="grid-80 mobile-grid-70 grid-parent search--area--input">
 						<input class="grid-100 mobile-grid-100" placeholder="FIND CONTACT">
@@ -60,17 +60,17 @@
 						<button id="search-global" class="button search--area--button grid-100 mobile-grid-100">SEARCH</button>
 					</div>
 				</div>
+				<nav class="navigation-mobile grid-100 mobile-grid-100">
+					<div class="grid-100 mobile-grid-100">
+						<a href="index.html">Link 1</a>
+						<a href="index.html">Link 2</a>
+						<a href="index.html">Link 3</a>
+						<a href="index.html">Link 4</a>
+						<a href="index.html">Link 5</a>
+						<a href="index.html">Link 6</a>
+					</div>
+				</nav>
 			</div>
-			<nav class="navigation-mobile grid-100 mobile-grid-100">
-				<div class="grid-100 mobile-grid-100">
-					<a href="index.html">Link 1</a>
-					<a href="index.html">Link 2</a>
-					<a href="index.html">Link 3</a>
-					<a href="index.html">Link 4</a>
-					<a href="index.html">Link 5</a>
-					<a href="index.html">Link 6</a>
-				</div>
-			</nav>
 		</div>
 	</section>
 	<section id="filters" class="overlay filters">
@@ -112,14 +112,13 @@
 					<h3>CATEGORY</h3>
 				</div>
 				<div class="grid-100 mobile-grid-100 filter--categories">
-					<input type="text" class="grid-100 mobile-grid-100 filter--categories__input" placeholder="ADD CATEGORIES">
+					<input id="filter--add--category" type="text" class="grid-100 mobile-grid-100 filter--categories__input" placeholder="ADD CATEGORIES">
 				</div>
-				<div class="grid-100 mobile-grid-100 filter--categories">
+				<div id="filter--categories" class="grid-100 mobile-grid-100 filter--categories">
 					<div class="filter--category__item">
 						<label>Category 1</label>
 						<i class="fa fa-times" aria-hidden="true"></i>
 					</div>
-						
 				</div>
 			</div>
 			<div class="grid-100 mobile-grid-100 grid-parent filter--area">

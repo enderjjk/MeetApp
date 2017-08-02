@@ -129,6 +129,24 @@ h3 { font-size:1.5em; padding-bottom:1em;  }
 			color:@logo-red-rgb;
 		}
 	}
+	& .search--area{
+		padding-bottom:2em;
+		margin-bottom:2em;
+		border-bottom:1px solid lighten(@font-color, 50%);
+		& .button{
+			float:left;
+			background: @logo-red-rgb;
+			color:#fff;
+			cursor:pointer;
+			border:0;
+			height:3em;
+			line-height:3em;
+			&:hover{
+				background: darken(@logo-red-rgb,25%);
+				color:#fff;
+			}
+		}
+	}
 }
 .button{
 	float:left;

@@ -33,5 +33,14 @@ $(function(){
 			button.find('i').addClass('fa-bookmark-o').removeClass('fa-bookmark');
 		}
 			
+	}).on('click', '.filter--category__item i', function(){
+		var item = $(this).parent().remove();
+			
+	}).on('keypress', '#filter--add--category', function(event){
+		var categoryText = $(this).val();
+		if (event.keyCode === 13 && categoryText !== "" ){
+			$('#filter--categories').append('<div class="filter--category__item"><label>' + categoryText + '</label><i class="fa fa-times" aria-hidden="true"></i></div>');
+		}
+			
 	});
 });
