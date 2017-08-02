@@ -2,6 +2,10 @@
 @import url("unsemantic-grid-responsive.css") screen;
 @import url("font-awesome.css") screen;
 @import url("font-awesome-ie7.css") screen;
+@import url("jquery-ui.min.css") screen;
+@import url("jquery-ui.structure.min.css") screen;
+@import url("jquery-ui.theme.min.css") screen;
+
 
 @font-face {
     font-family: 'Porter Bold';
@@ -254,6 +258,12 @@ button{
 				margin:0 1em 1em 0;
 				padding:1em;
 				background:lighten(@font-color, 40%);
+				&:hover{
+					background:lighten(@font-color, 25%);
+				}
+				& i {
+					cursor:pointer;
+				}
 			}
 		}
 	}
@@ -413,4 +423,5 @@ button{
 .switch-slide .switch-input:checked ~ .switch-label:after {
 	left: 0;
 }
-
+/* RESET UI WIDGETS */
+.ui-widget { font-family: @font-body; font-size: 2em; }

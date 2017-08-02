@@ -15,6 +15,8 @@ function closeFilters() {
 }
 $(function(){
 	
+	$('#filter--date__input-from, #filter--date__input-to').datepicker();
+	
 	$(document).on('click', '#menu--button', function(){
 			openNav();
 	}).on('click', '#button--menu-close', function(){
