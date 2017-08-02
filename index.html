@@ -38,7 +38,6 @@
 	<section id="navigation" class="overlay">
 		<header class="header">
 			<div class="grid-100 mobile-grid-100 grid-parent">
-
 				<div class="grid-50 push-25 mobile-grid-50 grid-parent header--title">
 					<h1>Menu</h1>
 				</div>
@@ -136,7 +135,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="grid-container grid-parent">
+	<section id="contact-list" class="grid-container grid-parent">
 		<div class="grid-100 mobile-grid-100 grid-parent contacts">
 			<div class="grid-50 mobile-grid-100">
 				<div class="grid-100 mobile-grid-100 grid-parent contact--item">
@@ -152,24 +151,47 @@
 					</div>
 					<div class="grid-100 mobile-grid-100 grid-parent contact--item--actions">
 						<div class="grid-33 mobile-grid-33 contact--item--actions__bookmark">
-							<label>Bookmark</label>
+							<label class="mobile-grid-100">Bookmark</label>
 							<button class="bookmark" title="Bookmark Juliusz Kwiatkowski">
 								<i class="fa fa-bookmark-o" aria-hidden="true"></i>
 							</button>
 						</div>
 						<div class="grid-33 mobile-grid-33 contact--item--actions__messages">
-							<label>Messages</label>
+							<label class="mobile-grid-100">Messages</label>
 							<button title="Messages between me and Juliusz Kwiatkowski">
 								<i class="fa fa-comment" aria-hidden="true"></i>
 							</button>
 						</div>
 						<div class="grid-33 mobile-grid-33 contact--item--actions__follow-up">
-							<label>Follow</label>
-							<label class="switch switch-slide">
+							<label class="mobile-grid-100">Follow</label>
+							<label class="mobile-grid-100 switch switch-slide">
 								<input class="switch-input" type="checkbox" title="Follow needed with Juliusz Kwiatkowski"/>
 								<span class="switch-label" data-on="Yes" data-off="No"></span> 
 								<span class="switch-handle"></span>
 							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="contact-details" class="grid-container grid-parent">
+		<div class="grid-100 mobile-grid-100">
+			<div class="grid-100 mobile-grid-100 grid-parent contact--details">
+				<div class="grid-100 mobile-grid-100 grid-parent contact--details--top">
+					<div class="grid-100 mobile-grid-100 grid-parent contact--details--top--image">
+						<img src="images/person.jpg" class="contact--details--top__image">
+					</div>
+					<div class="grid-100 mobile-grid-100 grid-parent contact--details--top--info">
+						<h2 class="contact--details--top--info__name">Juliusz Kwiatkowski</h2>
+						<h3 class="contact--details--top--info__company">Front end dev</h3>
+						<h3 class="contact--details--top--info__position">Enderstudio</h3>
+					</div>
+					<div class="grid-100 mobile-grid-100 grid-parent contact--details--top--bookmark">
+						<div class="grid-20 push-40 mobile-grid-100 contact--item--actions__bookmark">
+							<button class="bookmark" title="Bookmark Juliusz Kwiatkowski">
+								<i class="fa fa-bookmark-o" aria-hidden="true"></i>
+							</button>
 						</div>
 					</div>
 				</div>

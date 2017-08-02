@@ -5,6 +5,7 @@
 @import url("jquery-ui.min.css") screen;
 @import url("jquery-ui.structure.min.css") screen;
 @import url("jquery-ui.theme.min.css") screen;
+@import url("media.css") screen;
 
 
 @font-face {
@@ -232,6 +233,67 @@ button{
 				}
 				&.fa-bookmark-o{
 					color:#f00;
+				}
+			}
+		}
+	}
+}
+.contact--details{ 
+	background:#fff;
+	& .contact--details--top{
+		background:@main-color;
+		& .contact--details--top--image{
+			padding:2em 0 4em 0;
+			& .contact--details--top__image{
+				position:relative;
+				width:25%;
+				height:25%;
+				left:50%;
+				top:3em;
+				margin-left:-12.5%;
+				border-radius:50%;
+			}
+		}
+		& .contact--details--top--info{
+			padding-bottom:1em;
+			& h2, h3{
+				text-align:center;
+				color:#fff;
+				line-height:1em;
+				padding-bottom:0;
+				font-weight:500;
+			}
+			& h3{
+				color:darken(#fff, 25%);
+				text-transform:uppercase;
+			}
+		}
+		& .contact--details--top--bookmark{
+			font-size:1.25em;
+			line-height:3em;
+			color:#fff;
+			& label{ 
+				float:left;
+				margin-right:1em;
+				text-transform:uppercase;
+			}
+			& button{
+				font-size:1.25em;
+				line-height:3em;
+				float:left;
+				background:none;
+				border:0;
+				position:relative;
+				left: 50%;
+				margin-left: -0.5em;
+				& .fa{
+					font-size:1.5em;
+					&.fa-bookmark{
+						color:@logo-red-rgb;
+					}
+					&.fa-bookmark-o{
+						color:#f00;
+					}
 				}
 			}
 		}

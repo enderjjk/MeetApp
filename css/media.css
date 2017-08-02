@@ -1,0 +1,14 @@
+@media (max-width: 767px) { 
+	.contact--item--actions label { text-align:center; }
+	.contact--item--actions .switch-slide{
+		position:relative;
+		left:50%;
+		margin-left:-3em; 
+	}
+	.contact--item--actions button{ 
+		position:relative;
+		left:50%;
+		margin-left:-0.5em; 
+	}
+	.ui-widget { font-family: @font-body; font-size: 1.5em; }
+}
