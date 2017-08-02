@@ -99,7 +99,7 @@ h3 { font-size:1.5em; padding-bottom:1em;  }
     background-color: #fff; /* Black w/opacity */
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-	&.filters{
+	&.filters, &.contact--details--area{
 		left: 100%;
 	}
 	& .menu-mobile{ 
@@ -123,7 +123,6 @@ h3 { font-size:1.5em; padding-bottom:1em;  }
 		}
 	}
 	button{
-		float:left;
 		border:1px solid @background-content;
 		color:@background-content;
 		background:none;
@@ -170,7 +169,7 @@ h3 { font-size:1.5em; padding-bottom:1em;  }
 button{
 	cursor:pointer;
 }
-.filter--button{
+.filter--button, .contact--button{
 	width:3em;
 	height:3em;
 	background:@logo-red-rgb;
@@ -185,7 +184,7 @@ button{
 	&:hover{
 		background:darken(@logo-red-rgb, 10%);
 	}
-	&.filter--button--close, &.filter--button--filter{
+	&.filter--button--close, &.filter--button--filter, &.contact--button--cog{
 		float:right;
 	}
 }
@@ -194,6 +193,9 @@ button{
 	padding-top:1em;
 	padding-bottom:1em;
 	margin-bottom:1em;
+	&:hover{
+		box-shadow:0.5em 0.5em 0.25em lighten(@font-color, 25%);
+	}
 	& .contact--item--photo{
 		& .contact--item--photo__image{
 			border-radius:50%;
@@ -204,6 +206,7 @@ button{
 		line-height:1em;
 		padding-bottom:0;
 		font-weight:500;
+		&:hover{ cursor:pointer; }
 	}
 	& h3{
 		color:@font-color;
@@ -241,16 +244,18 @@ button{
 .contact--details{ 
 	background:#fff;
 	& .contact--details--top{
+		padding-bottom:0.5em;
+		margin-bottom:1em;
 		background:@main-color;
 		& .contact--details--top--image{
-			padding:2em 0 4em 0;
+			padding:0 0 3em 0;
 			& .contact--details--top__image{
 				position:relative;
-				width:25%;
-				height:25%;
+				width:20%;
+				height:20%;
 				left:50%;
-				top:3em;
-				margin-left:-12.5%;
+				top:1em;
+				margin-left:-10%;
 				border-radius:50%;
 			}
 		}
@@ -294,6 +299,58 @@ button{
 					&.fa-bookmark-o{
 						color:#f00;
 					}
+				}
+			}
+		}
+	}
+	& .contact--details--middle{
+		
+		& .contact--details--middle__item{
+			color:@main-color;
+			font-size:1.5em;
+			line-height:2em;
+			padding-bottom:1em;
+			& i{
+				margin-right:1.25em;
+			}
+		}
+	}
+	& .contact--details--menu{
+		& .contact--details--menu__item {
+			margin-bottom:2em;
+			& .item--header{
+				cursor:pointer;
+				background:none;
+				color:@main-color;
+				font-size:1.5em;
+				line-height:2em;
+				&:hover {
+					background:@main-color;
+					color:#fff;
+					font-size:1.5em;
+					line-height:2em;
+				}
+				& i{
+					margin-right:1.25em;
+				}
+			}
+			& .item--body{
+				padding-bottom:2em;
+				padding-top:2em;
+				display:none;
+				border-bottom:1px solid lighten(@font-color, 50%);
+				border-left:1px solid lighten(@font-color, 50%);
+				border-right:1px solid lighten(@font-color, 50%);
+			}
+			&.is--open{
+				& .item--header{
+					background:@main-color;
+					color:#fff;
+					font-size:1.5em;
+					line-height:2em;
+				}
+				& .item--body{
+					display:block;
 				}
 			}
 		}

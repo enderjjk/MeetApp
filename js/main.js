@@ -13,6 +13,13 @@ function openFilters() {
 function closeFilters() {
     document.getElementById("filters").style.left = "100%";
 }
+function openDetailsPage() {
+	document.getElementById("contact-details").style.left = "0%";
+}
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeDetailsPage() {
+    document.getElementById("contact-details").style.left = "100%";
+}
 $(function(){
 	
 	$('#filter--date__input-from, #filter--date__input-to').datepicker();
@@ -44,5 +51,12 @@ $(function(){
 			$('#filter--categories').append('<div class="filter--category__item"><label>' + categoryText + '</label><i class="fa fa-times" aria-hidden="true"></i></div>');
 		}
 			
+	}).on('click', '.contact--item--top', function(){
+		openDetailsPage();
+	}).on('click', '#contact--button--back', function(){
+		closeDetailsPage();
+	}).on('click', '.contact--details--menu__item .item--header', function(){
+		$('.contact--details--menu__item').removeClass('is--open');
+		$(this).parent().addClass('is--open');
 	});
 });

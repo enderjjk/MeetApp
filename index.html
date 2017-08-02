@@ -139,7 +139,7 @@
 		<div class="grid-100 mobile-grid-100 grid-parent contacts">
 			<div class="grid-50 mobile-grid-100">
 				<div class="grid-100 mobile-grid-100 grid-parent contact--item">
-					<div class="grid-100 mobile-grid-100 grid-parent">
+					<div class="grid-100 mobile-grid-100 grid-parent contact--item--top">
 						<div class="grid-15 mobile-grid-30 contact--item--photo">
 							<img src="images/person.jpg" class="grid-100 mobile-grid-100 grid-parent contact--item--photo__image">
 						</div>
@@ -175,8 +175,29 @@
 			</div>
 		</div>
 	</section>
-	<section id="contact-details" class="grid-container grid-parent">
-		<div class="grid-100 mobile-grid-100">
+	<section id="contact-details" class="overlay contact--details--area">
+		<header class="header">
+			<div class="grid-100 mobile-grid-100 grid-parent">
+				<div class="grid-25 mobile-grid-25 grid-parent header--navigation">
+					<div>
+						<button id="contact--button--back" class="contact--button contact--button--back" title="Back to Contacts List">
+							<i class="fa fa-arrow-left" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+				<div class="grid-50 mobile-grid-50 grid-parent header--title">
+					<h1>Contact</h1>
+				</div>
+				<div class="grid-25 mobile-grid-25 grid-parent">
+					<div>
+						<button id="contact--button--cog" class="contact--button contact--button--cog" title="Edit Information">
+							<i class="fa fa-cog" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>	
+		<div class="grid-container grid-parent">
 			<div class="grid-100 mobile-grid-100 grid-parent contact--details">
 				<div class="grid-100 mobile-grid-100 grid-parent contact--details--top">
 					<div class="grid-100 mobile-grid-100 grid-parent contact--details--top--image">
@@ -192,6 +213,40 @@
 							<button class="bookmark" title="Bookmark Juliusz Kwiatkowski">
 								<i class="fa fa-bookmark-o" aria-hidden="true"></i>
 							</button>
+						</div>
+					</div>
+				</div>
+				<div class="grid-100 mobile-grid-100 contact--details--middle">
+					<div class="grid-100 mobile-grid-100 contact--details--middle__item">
+						<i class="fa fa-envelope-o" aria-hidden="true"></i> enderstudio@gmail.com
+					</div>
+					<div class="grid-100 mobile-grid-100 contact--details--middle__item">
+						<i class="fa fa-mobile" aria-hidden="true"></i> 07594373012
+					</div>
+				</div>
+				<div class="grid-100 mobile-grid-100 grid-parent contact--details--menu">
+					<div class="grid-100 mobile-grid-100 contact--details--menu__item is--closed">
+						<div class="grid-100 mobile-grid-100 item--header">
+							<i class="fa fa-sticky-note-o" aria-hidden="true"></i> Notes
+						</div>
+						<div class="grid-100 mobile-grid-100 item--body">
+							<textarea class="grid-100 mobile-grid-100"></textarea>
+						</div>
+					</div>
+					<div class="grid-100 mobile-grid-100 contact--details--menu__item is--closed">
+						<div class="grid-100 mobile-grid-100 item--header">
+							<i class="fa fa-calendar" aria-hidden="true"></i> Events
+						</div>
+						<div class="grid-100 mobile-grid-100 item--body">
+							<textarea class="grid-100 mobile-grid-100"></textarea>
+						</div>
+					</div>
+					<div class="grid-100 mobile-grid-100 contact--details--menu__item is--closed">
+						<div class="grid-100 mobile-grid-100 item--header">
+							<i class="fa fa-picture-o" aria-hidden="true"></i> Photos
+						</div>
+						<div class="grid-100 mobile-grid-100 item--body">
+							<textarea class="grid-100 mobile-grid-100"></textarea>
 						</div>
 					</div>
 				</div>
